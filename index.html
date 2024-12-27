@@ -6,6 +6,53 @@
     <title>The CAVE Lincoln Lead Assessment</title>
 </head>
 <style>
+
+@media (max-width: 768px) {
+    body {
+        font-size: 14px;
+        padding: 5px;
+    }
+
+    #form-container {
+        padding: 10px;
+        max-width: 95%;
+        text-align: center;
+    }
+
+    :is(h1, h2, h3, h4, h5, h6) {
+        font-size: 1.8rem;
+        margin-bottom: 10px;
+    }
+
+    label {
+        font-size: 1rem;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    textarea {
+    width: 100%; /* Match the container width */
+    max-width: 300px; /* Add a max-width to avoid excessively long fields */
+    box-sizing: border-box; /* Ensure padding doesn't exceed the width */
+    padding: 10px;
+    font-size: 1rem;
+    }
+
+    button {
+        font-size: 1rem;
+        width: 90%;
+        padding: 10px;
+        margin: 10px auto;
+    }
+
+    .radio-group {
+        display: flex;
+        flex-direction: column;
+    }
+
+}
+
+
 body {
     background-color: #111111;
 }
@@ -14,6 +61,7 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    flex-wrap: wrap;
     align-items: center;
     min-height: 100vh;
     max-width: 700px;
@@ -31,6 +79,7 @@ body {
 
 p {
     color: #ffffff;
+    font-family: 'Poppins', sans-serif; 
 }
 
 label {
@@ -267,7 +316,7 @@ input[type="radio"] {
         <!-- Introduction -->
          <div class="form-step intro">
             <h2>Welcome to The Cave Lincoln.</h2>
-            <p style="margin-top: -30px;">We're excited to help you achieve your health and fitness goals. To get started, let’s find the best program for you. This will only take a couple of minutes!</p>
+            <p>We're excited to help you achieve your health and fitness goals. To get started, let’s find the best program for you. This will only take a couple of minutes!</p>
             <button type="button" class="next">Start</button>
          </div>
 
@@ -372,7 +421,8 @@ input[type="radio"] {
         </div>
 
         <div class="form-step">
-            <label for="prioritise">Would you prioritise cost savings with larger groups or the higher personalisation of smaller groups or 1-2-1 coaching?</label>
+            <label for="prioritise">What are your group training priorities?</label>
+            <p>Would you prioritise cost savings with larger groups or the higher personalisation of smaller groups or 1-2-1 coaching?</p>
             <div class="radio-group">
                 <input type="radio" id="prioritise_1" name="prioritise" value="cost_savings" required />
                 <label for="prioritise_1">I’d prioritise cost savings and larger groups.</label>
@@ -388,7 +438,7 @@ input[type="radio"] {
         </div>
 
         <div class="form-step">
-            <label for="investment">What kind of investment are you comfortable making in your health and each month?</label>
+            <label for="investment">What kind of investment are you comfortable making in your health?</label>
             <div class="radio-group">
                 <input type="radio" id="investment_1" name="investment" value="100" required />
                 <label for="investment_1">Up to £100/month.</label>
