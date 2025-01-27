@@ -7,7 +7,7 @@
 </head>
 <style>
 
-@media (max-width: 768px) {
+@media (max-width: 825px) {
     body {
         font-size: 14px;
         padding: 5px;
@@ -20,7 +20,7 @@
     }
 
     :is(h1, h2, h3, h4, h5, h6) {
-        font-size: 1.8rem;
+        font-size: 2.3rem;
         margin-bottom: 10px;
     }
 
@@ -48,6 +48,21 @@
     .radio-group {
         display: flex;
         flex-direction: column;
+        align-items: center; /* Align radio buttons and labels to the left */
+        gap: 0; /* Remove gap between radio buttons and labels */
+    }
+
+    .radio-group input[type="radio"] {
+        transform: scale(1.5); /* Make buttons larger for touch */
+        margin-top: 10px;
+    }
+
+    .radio-group label {
+        font-size: 1rem;
+        line-height: 1.2;
+        color: white;
+        margin-top: 0; /* Remove any top margin */
+        margin-bottom: 5px; /* Slight margin to reduce space between radio button and label */
     }
 
 }
@@ -326,6 +341,30 @@ input[type="radio"] {
           <button type="button" class="next">Next</button>
           <button type="button" class="prev">Back</button>
         </div>
+
+
+
+        <!-- REMOVE -->
+        <div class="form-step">
+            <label for="fitness_goal">What’s your main fitness goal right now?</label>
+            <div class="radio-group">
+                <input type="radio" id="fitness_goal_1" name="fitness_goal" value="lose_weight" required />
+                <label for="fitness_goal_1">Lose weight</label>
+                <br>
+                <input type="radio" id="fitness_goal_2" name="fitness_goal" value="muscle/strength" />
+                <label for="fitness_goal_2">Build muscle/strength</label>
+                <br>
+                <input type="radio" id="fitness_goal_3" name="fitness_goal" value="fitness_health" />
+                <label for="fitness_goal_3">Improve overall fitness and health</label>
+            </div>
+            <button type="button" class="next">Next</button>
+            <button type="button" class="prev">Back</button>
+        </div>
+
+
+
+
+
       
         <div class="form-step">
             <label for="name">What is your last name?</label>
